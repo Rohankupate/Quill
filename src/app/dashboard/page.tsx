@@ -8,8 +8,8 @@ if (!user || !user.id) redirect("auth-callback?origin=dashboard")
 
 
     return (
-        <div>hii
-            
+        <div>
+            {user.email}
         </div>
         
     )
