@@ -24,7 +24,7 @@ const Page= () => {
 
 })
 return(
-    <div className="w-full mt-24 flex justify-center">
+    <div className="w-full mt-24 flex justify-center ">
         <div className="flex flex-col items-center gap-2">
 <Loader className="h-8 w-8 animate-spin text-zinc-800"></Loader>
 <h3 className="font-semibold text-xl"> Setting up your account...</h3>

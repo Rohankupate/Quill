@@ -3,6 +3,7 @@ import { Children, useState , PropsWithChildren } from "react"
 import {QueryClient , QueryClientProvider} from '@tanstack/react-query'
 import { trpc } from "@/app/_trpc/client"
 import { httpBatchLink } from "@trpc/react-query"
+import { absoluteUrl } from '@/lib/utils'
 
 const Providers= ({children}:PropsWithChildren)=>{
     const [queryclient] = useState(()=> new QueryClient())
@@ -28,3 +29,5 @@ const Providers= ({children}:PropsWithChildren)=>{
       )
 }
 export default Providers
+
+

@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 function Navbar() {
   return (
-    <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all  shadow-md">
+    <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all  ">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="text-3xl z-40 font-bold flex ">
@@ -15,7 +15,7 @@ function Navbar() {
 
           <div className="space-x-2 px-2 hidden sm:flex font-semibold ">
             <Link
-              href="/pricing"
+              href="/about"
               className={buttonVariants({
                 size: "sm",
                 variant: "ghost"
