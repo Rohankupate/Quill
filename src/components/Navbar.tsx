@@ -4,7 +4,10 @@ import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
-function Navbar() {
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+async function Navbar () {
+  const { getUser } =  getKindeServerSession();
+  const user = await getUser();
   return (
     <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all  ">
       <MaxWidthWrapper>
@@ -12,7 +15,7 @@ function Navbar() {
           <Link href="/" className="text-3xl z-40 font-bold flex ">
             quill.
           </Link>
-
+      {user?.id}
           <div className="space-x-2 px-2 hidden sm:flex font-semibold ">
             <Link
               href="/about"
