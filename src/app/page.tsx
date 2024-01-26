@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import { buttonVariants } from '@/components/ui/button'
 import Image from 'next/image'

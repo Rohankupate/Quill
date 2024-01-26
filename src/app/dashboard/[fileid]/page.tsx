@@ -1,3 +1,4 @@
+
 import PdfChatter from "@/components/PdfChatter";
 import PdfWrapper from "@/components/PdfWrapper";
 import { db } from "@/db";
@@ -17,6 +18,7 @@ const Page = async ({ params }: PageProps) => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   if (!user || !user.id) redirect(`/auth-callback?origin=dashboard/${fileid}`);
+  console.log(user)
 
   const file = await db.file.findFirst({
     where: {

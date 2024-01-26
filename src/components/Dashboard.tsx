@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 import { set } from "date-fns";
 import { useState } from "react";
 
-export function Dashboard() {
+function Dashboard() {
   const [currentlyDeletingFile, setCurrentlyDeletingFile] =
   useState<string | null>(null)
 
@@ -108,3 +108,6 @@ const { mutate: deleteFile } =
     </main>
   );
 }
+
+
+export default Dashboard
