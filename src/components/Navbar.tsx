@@ -22,8 +22,8 @@ const Navbar = () => {
           <Link
             href='/'
             className='flex z-40 font-semibold'>
-            <span>quill.</span>
-          </Link>
+            <span>Doctalker.</span>
+          </Link>Doctalker
 
           <MobileNav isAuth={!!user} />
 

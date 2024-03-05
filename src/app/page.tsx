@@ -95,7 +95,7 @@ export  default function Home() {
           <h1  className='mt-2 font-bold text-4xl text-gray-900 sm:text-5xl'>Start chatting in minutes</h1>
           <p className='mt-2 text-gray-600 text-lg'>
           Chatting to your PDF files has never been
-              easier than with Quill.
+              easier than with Doctalker.
           </p>
         </div>
         </div>
