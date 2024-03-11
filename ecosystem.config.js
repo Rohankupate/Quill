@@ -1,19 +1,21 @@
 module.exports = {
   apps : [{
-    script: 'index.js',
+    script: 'npm start',
     watch: '.'
   }],
 
   deploy : {
     production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
-      ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
+      key : 'doctalker.pem',
+      user : 'ubuntu',
+      host : '16.171.177.26',
+      ref  : 'origin/main',
+      repo : 'git@github.com:Rohankupate/doctalker.git',
+      path : 'home/ubuntu',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+      'post-deploy' : 'source ~/.nvm/nvm.sh && npm install && npm run build && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': '',
+      'ssh_options' : 'ForwardAgent=yes'
     }
   }
 };
